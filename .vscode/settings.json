@@ -1,0 +1,58 @@
+{
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "DotJoshJohnson.xml"
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "files.autoSave": "onFocusChange",
+    "files.eol": "\n",
+    "html.format.wrapAttributes": "preserve-aligned",
+    "todo-tree.regex.regex": "((//|/*))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
+    "todo-tree.highlights.defaultHighlight": {
+        "fontWeight": "bold",
+        "fontStyle": "italic",
+        "foreground": "#ff9900",
+        "background": "#a8c023",
+        "type": "text-and-comment",
+        "opacity": 30
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "iconColour": "green"
+        },
+        "FIXME": {
+            "icon": "alert",
+            "iconColour": "red"
+        }
+    },
+    "todo-tree.filtering.excludeGlobs": [
+        "**/vendor/**",
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/bower_components/**",
+        "**/build/**",
+        "**/.vscode/**",
+        "**/.github/**",
+        "**/_output/**",
+        "**/*.min.*",
+        "**/*.map"
+    ],
+    "todo-tree.highlights.highlightDelay": 0,
+    "xmlTools.splitAttributesOnFormat": true,
+    "xmlTools.enforcePrettySelfClosingTagOnFormat": true
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ui5-webcomponents-controls",
+  "version": "0.0.1",
+  "description": "A repository, showcasing the consumption of UI5 Web Components as UI5 Controls",
+  "private": true,
+  "scripts": {
+    "start": "mkdirp \"packages/ui5-webcomponents-lib/dist/resources\" && concurrently \"cd packages/ui5-webcomponents-lib && yarn watch\" \"cd packages/ui5-app && yarn start\""
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "mkdirp": "^1.0.3"
+  }
+}
