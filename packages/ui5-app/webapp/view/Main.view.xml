@@ -2,6 +2,9 @@
 	displayBlock="true" 
 	xmlns="sap.m" 
 	xmlns:core="sap.ui.core" 
+	xmlns:card="sap.f.cards" 
+	xmlns:f="sap.f" 
+	xmlns:form="sap.ui.layout.form" 
 	xmlns:l="sap.ui.layout" 
 	xmlns:mvc="sap.ui.core.mvc">
 	<Page title="{i18n>appTitle}">
@@ -24,33 +27,124 @@
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell width="2">
-						<VBox width="100%" 
+						<HBox width="100%" 
+							justifyContent="Center" 
 							alignItems="Center">
 
-							<Button text="{i18n>startPage.uploadButton.text}" 
-								id="UploadButton" 
-								press="handleUploadPress" />
-						</VBox>
+							<DatePicker value="{
+								path:'Main>/date', 
+								type:'sap.ui.model.type.Date', 
+								formatOptions: { style: 'long', strictParsing: true}
+							}" />
+
+							<Text text="you picked: {
+									path: 'Main>/date', 
+									type:'sap.ui.model.type.Date', 
+									formatOptions: { style: 'full'}
+								}" 
+								class="sapUiSmallMarginBegin" />
+
+						</HBox>
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
-					<l:BlockLayoutCell>
-						<List id="ListOfItems" 
-							headerText="TripIt OData v4 people" 
-							items="{Backend>/People}">
-							<items>
-								<StandardListItem title="{Backend>FirstName} {Backend>LastName}" />
-							</items>
-						</List>
+					<l:BlockLayoutCell width="2">
+						<HBox width="100%" 
+							justifyContent="Center" 
+							alignItems="Center">
+
+							<Label text="Pick that TriptIt airport:" 
+								design="Bold" 
+								class="sapUiSmallMarginEnd" />
+							<MultiComboBox items="{
+												path: 'Backend>/Airports',
+												sorter: { path: 'Name' }
+											}">
+								<core:Item key="{Backend>IataCode}" 
+									text="{Backend>Name}" />
+							</MultiComboBox>
+
+						</HBox>
 					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow>
+
 					<l:BlockLayoutCell>
 						<VBox>
-							<Text text="preview" 
-								class="sapUiSmallMarginBottom" />
-							<Image id="PreviewImage" 
-								src="{PreviewImg>/imgSrc}" 
-								decorative="false" />
+
+							<f:Card class="sapUiMediumMargin" 
+								width="300px">
+								<f:header>
+									<card:Header title="TripIt OData v4" 
+										subtitle="People directory" 
+										iconSrc="sap-icon://group" />
+								</f:header>
+								<f:content>
+									<List items="{Backend>/People}" 
+										mode="SingleSelectMaster" 
+										selectionChange="onPeopleSelect">
+										<items>
+											<StandardListItem title="{Backend>FirstName} {Backend>LastName}" 
+												description="{Backend>UserName}" />
+										</items>
+									</List>
+
+								</f:content>
+							</f:Card>
 						</VBox>
+					</l:BlockLayoutCell>
+					<l:BlockLayoutCell>
+						<Text text="people details" 
+							class="sapUiSmallMarginBottom" />
+						<TabContainer class="sapUiResponsiveContentPadding sapUiResponsivePadding--header" 
+							busy="{Main>/TabContainerBusy}" 
+							busyIndicatorDelay="0">
+							<items>
+								<TabContainerItem name="master data" 
+									icon="sap-icons://person-placeholder">
+									<content>
+										<Label text="Name" 
+											labelFor="idName" />
+										<Input enabled="false" 
+											id="idName" 
+											value="{PeopleDetail>/FirstName} {PeopleDetail>/MiddleName} {PeopleDetail>/LastName}" />
+										<Label text="Username" 
+											labelFor="idUserName" />
+										<Input enabled="false" 
+											id="idUserName" 
+											value="{PeopleDetail>/UserName}" />
+										<Label text="Gender" 
+											labelFor="idGender" />
+										<Input enabled="false" 
+											id="idGender" 
+											value="{PeopleDetail>/Gender}" />
+										<Label text="Age" 
+											labelFor="idAge" />
+										<Input enabled="false" 
+											id="idAge" 
+											value="{= ${PeopleDetail>/Age} ? ${PeopleDetail>/Age} : '?'}" />
+									</content>
+								</TabContainerItem>
+								<TabContainerItem name="address" 
+									icon="sap-icons://addresses">
+									<content>
+										<Label text="Street" 
+											labelFor="idStreet" />
+										<Input enabled="false" 
+											id="idStreet" 
+											value="{= ${PeopleDetail>/AddressInfo/0/Address} ? ${PeopleDetail>/AddressInfo/0/Address} : '?' }" />
+										<Label text="City" 
+											labelFor="idCity" />
+										<Input enabled="false" 
+											id="idCity" 
+											value="{= ${PeopleDetail>/AddressInfo/0/City/Name} ? ${PeopleDetail>/AddressInfo/0/City/Name} : '?' }" />
+
+									</content>
+								</TabContainerItem>
+
+							</items>
+						</TabContainer>
+
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 

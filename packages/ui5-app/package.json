@@ -4,12 +4,13 @@
   "description": "UI5 application show-casing the usage of UI5 Web Components with UI5",
   "private": true,
   "scripts": {
-    "start": "ui5 serve --config ui5.yaml --open index.html"
+    "start": "ui5 serve --config ui5.yaml"
   },
   "dependencies": {
+    "@openui5/sap.f": "*",
+    "@openui5/sap.m": "*",
     "@openui5/sap.ui.core": "*",
     "@openui5/sap.ui.layout": "*",
-    "@openui5/sap.m": "*",
     "@openui5/themelib_sap_fiori_3": "*"
   },
   "devDependencies": {
@@ -19,8 +20,9 @@
   },
   "ui5": {
     "dependencies": [
-      "@openui5/sap.ui.core",
+      "@openui5/sap.f",
       "@openui5/sap.m",
+      "@openui5/sap.ui.core",
       "@openui5/sap.ui.layout",
       "@openui5/themelib_sap_fiori_3",
       "ui5-middleware-livereload",

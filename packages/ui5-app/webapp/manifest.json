@@ -22,6 +22,14 @@
       "LatestUI5Datasource": {
         "uri": "",
         "type": "JSON"
+      },
+      "MainDatasource": {
+        "uri": "model/MainViewModel.json",
+        "type": "JSON"
+      },
+      "PeopleDetailDatasource": {
+        "uri": "",
+        "type": "JSON"
       }
     }
   },
@@ -51,9 +59,10 @@
     "dependencies": {
       "minUI5Version": "1.68.1",
       "libs": {
+        "sap.f": {},
+        "sap.m": {},
         "sap.ui.core": {},
-        "sap.ui.layout": {},
-        "sap.m": {}
+        "sap.ui.layout": {}
       }
     },
     "contentDensities": {
@@ -79,6 +88,14 @@
       "LatestUI5": {
         "type": "sap.ui.model.json.JSONModel",
         "dataSource": "LatestUI5Datasource"
+      },
+      "Main": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "MainDatasource"
+      },
+      "PeopleDetail": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "PeopleDetailDatasource"
       }
     },
     "routing": {
@@ -95,11 +112,6 @@
           "name": "RouteMain",
           "pattern": "",
           "target": ["TargetMain"]
-        },
-        {
-          "name": "RouteOther",
-          "pattern": "other",
-          "target": ["TargetOther"]
         }
       ],
       "targets": {
@@ -109,13 +121,6 @@
           "clearControlAggregation": false,
           "viewId": "Main",
           "viewName": "Main"
-        },
-        "TargetOther": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "Other",
-          "viewName": "Other"
         }
       }
     }
