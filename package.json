@@ -7,7 +7,7 @@
     "start": "npm-run-all build:webclib --parallel start:webc start:xml",
     "start:webc": "cd packages/ui5-app/webcomponents && npm start",
     "start:xml": "cd packages/ui5-app/xmlcontrols && npm start",
-    "build:webclib": "packages/ui5-webcomponents-lib && npm-run-all rollup build"
+    "build:webclib": "cd packages/ui5-webcomponents-lib && npm-run-all rollup build"
   },
   "workspaces": [
     "packages/ui5-app/webcomponents",
