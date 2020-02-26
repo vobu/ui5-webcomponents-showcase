@@ -7,9 +7,18 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
+            "name": "Launch Chrome against XML Controls",
             "url": "http://localhost:8081",
-            "webRoot": "${workspaceFolder}/packages/ui5-app/webapp",
+            "webRoot": "${workspaceFolder}/packages/ui5-app-xmlcontrols/webapp",
+            "showAsyncStacks": true,
+            "disableNetworkCache": true
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against Web Components",
+            "url": "http://localhost:8082",
+            "webRoot": "${workspaceFolder}/packages/ui5-app-webcomponents/webapp",
             "showAsyncStacks": true,
             "disableNetworkCache": true
         }
