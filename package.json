@@ -5,14 +5,12 @@
   "private": true,
   "scripts": {
     "start": "npm-run-all build:webclib --parallel start:webc start:xml",
-    "start:webc": "cd packages/ui5-app/webcomponents && npm start",
-    "start:xml": "cd packages/ui5-app/xmlcontrols && npm start",
-    "build:webclib": "cd packages/ui5-webcomponents-lib && npm-run-all rollup build"
+    "start:webc": "cd packages/ui5-app-webcomponents && yarn start",
+    "start:xml": "cd packages/ui5-app-xmlcontrols && yarn start",
+    "build:webclib": "cd packages/ui5-webcomponents-lib && yarn build"
   },
   "workspaces": [
-    "packages/ui5-app/webcomponents",
-    "packages/ui5-app/xmlcontrols",
-    "packages/ui5-webcomponents-lib"
+    "packages/*"
   ],
   "devDependencies": {
     "npm-run-all": "^4.1.5"

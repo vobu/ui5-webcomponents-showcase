@@ -17,7 +17,7 @@ sap.ui.define(["sap/ui/core/Control", "sap/ui/core/TitleLevel"], (Control, Title
                 oRM.attr("wrap", oTitle.getWrapping())
                 oRM.openEnd()
                 oRM.text(oTitle.getText())
-                oRM.close("ui5-token")
+                oRM.close("ui5-title")
             }
         }
     })
