@@ -1,4 +1,4 @@
-sap.ui.define(["sap/ui/core/Control", "sap/ui/core/TitleLevel"], (Control, TitleLevel, TitleLevel) => {
+sap.ui.define(["sap/ui/core/Control", "sap/ui/core/TitleLevel"], (Control, TitleLevel) => {
     const Title = Control.extend("ui5webc.Title", {
         metadata: {
             properties: {
