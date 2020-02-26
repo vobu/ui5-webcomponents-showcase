@@ -14,7 +14,8 @@
   "watch": {
     "build": {
       "patterns": [
-        "src"
+        "src",
+        "lib/bundle.js"
       ],
       "extensions": "js",
       "quiet": false
