@@ -101,7 +101,7 @@
 							busyIndicatorDelay="0">
 							<items>
 								<TabContainerItem name="master data" 
-									icon="sap-icons://person-placeholder">
+									icon="sap-icon://person-placeholder">
 									<content>
 										<Label text="Name" 
 											labelFor="idName" />
@@ -126,7 +126,7 @@
 									</content>
 								</TabContainerItem>
 								<TabContainerItem name="address" 
-									icon="sap-icons://addresses">
+									icon="sap-icon://addresses">
 									<content>
 										<Label text="Street" 
 											labelFor="idStreet" />
