@@ -8,9 +8,10 @@ sap.ui.define(["test/Sample/controller/BaseController", "sap/ui/model/json/JSONM
                 })
                 .catch(err => console.error(err))
         },
+        // this now is attached to the list item (as it should be, IMO :) )
         onPeopleSelect(oEvent) {
             this.getModel("Main").setProperty("/TabContainerBusy", true)
-            const oListItemSelected = oEvent.getParameters().listItem
+            const oListItemSelected = oEvent.getSource() // different from retrieving selected XML control!
             const sPersonDetail = oListItemSelected.getBindingContext("Backend").getPath()
             const sModelBasePath = oListItemSelected.getBindingContext("Backend").getModel().sServiceUrl // I know
             fetch(`${sModelBasePath}${sPersonDetail}?$format=json`)

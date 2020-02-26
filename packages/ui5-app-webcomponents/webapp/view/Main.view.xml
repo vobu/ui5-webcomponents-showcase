@@ -79,14 +79,12 @@
 										iconSrc="sap-icon://group" />
 								</f:header>
 								<f:content>
-									<List items="{Backend>/People}" 
-										mode="SingleSelectMaster" 
-										selectionChange="onPeopleSelect">
-										<items>
-											<StandardListItem title="{Backend>FirstName} {Backend>LastName}" 
-												description="{Backend>UserName}" />
-										</items>
-									</List>
+									<webc:List items="{Backend>/People}" 
+										mode="SingleSelect">
+										<webc:StandardListItem title="{Backend>FirstName} {Backend>LastName}" 
+											description="{Backend>UserName}" 
+											press="onPeopleSelect" />
+									</webc:List>
 
 								</f:content>
 							</f:Card>
