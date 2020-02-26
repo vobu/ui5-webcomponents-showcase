@@ -20,7 +20,7 @@
 					<l:BlockLayoutCell>
 						<Title level="H1" 
 							titleStyle="H1" 
-							text="UI5 Webcomponents" 
+							text="UI5 Controls" 
 							width="100%" 
 							textAlign="Center" />
 					</l:BlockLayoutCell>

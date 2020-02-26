@@ -1,6 +1,6 @@
 specVersion: "1.0"
 metadata:
-  name: ui5-webcomponents-app
+  name: ui5-xmlcontrols-app
 type: application
 server:
   customMiddleware:

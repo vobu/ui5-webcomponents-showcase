@@ -1,10 +1,10 @@
 {
   "name": "ui5-webcomponents-app",
   "version": "0.0.1",
-  "description": "UI5 application show-casing the usage of UI5 Web Components with UI5",
+  "description": "UI5 application w/ regular XML controls",
   "private": true,
   "scripts": {
-    "start": "ui5 serve --config ui5.yaml"
+    "start": "ui5 serve --port 8081"
   },
   "dependencies": {
     "@openui5/sap.f": "*",
