@@ -13,9 +13,9 @@ sap.ui.define(
             name: "ui5webc",
             version: "${version}",
             dependencies: ["sap.ui.core"],
-            types: [],
+            types: ["ui5webc.TitleDesign"],
             interfaces: [],
-            controls: ["ui5webc.Title"],
+            controls: ["ui5webc.Title", "ui5webc.List", "ui5webc.StandardListItem"],
             elements: [],
             noLibraryCSS: true
         })
@@ -36,6 +36,12 @@ sap.ui.define(
             Center: "center",
             Left: "left",
             Right: "right"
+        }
+        thisLib.ListMode = {
+            None: "None",
+            SingleSelect: "SingleSelect",
+            MultiSelect: "MultiSelect",
+            Delete: "Delete"
         }
 
         return thisLib
