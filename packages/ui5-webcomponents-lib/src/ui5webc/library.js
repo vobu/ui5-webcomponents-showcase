@@ -31,6 +31,13 @@ sap.ui.define(
          */
         let thisLib = ui5webc
 
+        thisLib.TitleDesign = {
+            Default: "",
+            Center: "center",
+            Left: "left",
+            Right: "right"
+        }
+
         return thisLib
     }
 )
