@@ -4,7 +4,8 @@
   "description": "UI5 application w/ regular XML controls",
   "private": true,
   "scripts": {
-    "start": "ui5 serve --port 8081"
+    "start": "ui5 build self-contained && ui5 serve --config ui5-dist.yaml --port 9081",
+    "start:dev": "ui5 serve --port 8081"
   },
   "dependencies": {
     "@openui5/sap.f": "*",

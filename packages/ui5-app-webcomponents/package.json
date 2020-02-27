@@ -4,7 +4,8 @@
   "description": "UI5 application w/ UI5 Web Components as UI5 controls",
   "private": true,
   "scripts": {
-    "start": "ui5 serve --port 8082"
+    "start": "ui5 build self-contained && ui5 serve --config ui5-dist.yaml --port 9082",
+    "start:dev": "ui5 serve --port 8082"
   },
   "dependencies": {
     "@openui5/sap.f": "*",
