@@ -26,27 +26,36 @@ $> yarn
 # starts (in this order)
 # - a build of selected UI5 web components as UI5 custom controls, wrapped into and exposed as a UI5 library "ui5webc"
 #
-# - http://localhost:8081 - traditional UI5 app
+# - http://localhost:8081 - self-contained traditional UI5 app
 #   - proxy at /proxy to https://latest-openui5.rikosjett.com
 #   - proxy at /backend to OData v4 TripIt service
 #
-# - http://localhost:8082 - UI5 app w/ UI5 web omponents
+# - http://localhost:8082 - self-contained UI5 app w/ UI5 web omponents
 #   - proxy at /proxy to https://latest-openui5.rikosjett.com
 #   - proxy at /backend to OData v4 TripIt service
-#   - live reload upon source changes
 
 $> yarn start
 ```
 
-## hack the web components
+## hack the web components and apps
 
 ```bash
-# there's also a separate command to watch
-# `packages/ui5-webcomponents-lib` for changes
-# so you can further develop the "bridges"
-# independent of the UI5 applications
+# there's also
+# - a separate command to watch
+#   `packages/ui5-webcomponents-lib` for changes
+#   so you can further develop the "bridges"
+#   independent of the UI5 applications
 
-$> yarn build:webclib:dev
+# - http://localhost:8081 - debug sources, traditional UI5 app
+#   - proxy at /proxy to https://latest-openui5.rikosjett.com
+#   - proxy at /backend to OData v4 TripIt service
+#
+# - http://localhost:8082 - debug sources, self-contained UI5 app w/ UI5 web omponents
+#   - proxy at /proxy to https://latest-openui5.rikosjett.com
+#   - proxy at /backend to OData v4 TripIt service
+#   - live reload upon source changes
+
+$> yarn start:dev
 ```
 
 ## license
