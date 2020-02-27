@@ -24,7 +24,8 @@ $> yarn
 
 
 # starts (in this order)
-# - a build of selected UI5 web components as UI5 custom controls, wrapped into and exposed as a UI5 library "ui5webc"
+# - a build of selected UI5 web components as UI5 custom controls,
+#   wrapped into and exposed as a UI5 library "ui5webc"
 #
 # - http://localhost:8081 - self-contained traditional UI5 app
 #   - proxy at /proxy to https://latest-openui5.rikosjett.com
