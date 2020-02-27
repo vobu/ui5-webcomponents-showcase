@@ -46,11 +46,11 @@ $> yarn start
 #   so you can further develop the "bridges"
 #   independent of the UI5 applications
 
-# - http://localhost:8081 - debug sources, traditional UI5 app
+# - http://localhost:9081 - debug sources, traditional UI5 app
 #   - proxy at /proxy to https://latest-openui5.rikosjett.com
 #   - proxy at /backend to OData v4 TripIt service
 #
-# - http://localhost:8082 - debug sources, self-contained UI5 app w/ UI5 web omponents
+# - http://localhost:9082 - debug sources, self-contained UI5 app w/ UI5 web omponents
 #   - proxy at /proxy to https://latest-openui5.rikosjett.com
 #   - proxy at /backend to OData v4 TripIt service
 #   - live reload upon source changes
