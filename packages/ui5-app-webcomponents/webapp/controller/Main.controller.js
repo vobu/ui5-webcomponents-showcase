@@ -21,7 +21,9 @@ sap.ui.define(["test/Sample/controller/BaseController", "sap/ui/model/json/JSONM
                 })
                 .catch(err => console.error(err))
                 .finally(this.getModel("Main").setProperty("/TabContainerBusy", false))
-        }
+        },
+
+        onDateSelected(oEvent) {}
     }
 
     return Controller.extend("test.Sample.controller.Main", extObj)

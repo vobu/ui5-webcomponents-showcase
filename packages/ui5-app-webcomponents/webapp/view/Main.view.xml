@@ -30,17 +30,11 @@
 							justifyContent="Center" 
 							alignItems="Center">
 
-							<DatePicker value="{
-								path:'Main>/date', 
-								type:'sap.ui.model.type.Date', 
-								formatOptions: { style: 'long', strictParsing: true}
-							}" />
+							<webc:DatePicker value="{Main>/date}" 
+								formatPattern="long" 
+								dateSelected="onDateSelected" />
 
-							<Text text="you picked: {
-									path: 'Main>/date', 
-									type:'sap.ui.model.type.Date', 
-									formatOptions: { style: 'full'}
-								}" 
+							<Text text="you picked: {Main>/date}" 
 								class="sapUiSmallMarginBegin" />
 
 						</HBox>
