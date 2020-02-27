@@ -34,7 +34,8 @@ sap.ui.define(["sap/ui/core/Control"], Control => {
     }
 
     StandardListItem.prototype.ontap = _pressFn
-    StandardListItem.prototype.onclick = _pressFn
+    // causes firing the event twice
+    // StandardListItem.prototype.onclick = _pressFn
 
     return StandardListItem
 })
