@@ -49,13 +49,12 @@
 							<Label text="Pick that TriptIt airport:" 
 								design="Bold" 
 								class="sapUiSmallMarginEnd" />
-							<MultiComboBox items="{
+							<webc:MultiComboBox items="{
 												path: 'Backend>/Airports',
 												sorter: { path: 'Name' }
 											}">
-								<core:Item key="{Backend>IataCode}" 
-									text="{Backend>Name}" />
-							</MultiComboBox>
+								<webc:Item text="{Backend>Name}" />
+							</webc:MultiComboBox>
 
 						</HBox>
 					</l:BlockLayoutCell>

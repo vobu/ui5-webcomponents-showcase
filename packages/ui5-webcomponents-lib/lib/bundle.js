@@ -7,3 +7,5 @@ import "@ui5/webcomponents/dist/GroupHeaderListItem"
 import "@ui5/webcomponents/dist/Title"
 
 import "@ui5/webcomponents/dist/DatePicker"
+
+import "@ui5/webcomponents/dist/MultiComboBox"
