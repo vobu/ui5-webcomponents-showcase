@@ -16,7 +16,7 @@ sap.ui.define(["sap/ui/core/Control", "sap/ui/core/TitleLevel"], (Control, Title
         },
         renderer: {
             apiVersion: 2,
-            render: (oRM, oTitle) => {
+            render(oRM, oTitle) {
                 oRM.openStart("ui5-title", oTitle)
                 oRM.attr("level", oTitle.getLevel())
                 oRM.attr("wrap", oTitle.getWrapping())

@@ -42,7 +42,7 @@ sap.ui.define(["sap/ui/core/Control"], Control => {
 
         renderer: {
             apiVersion: 2,
-            render: (oRM, oDatePicker) => {
+            render(oRM, oDatePicker) {
                 oRM.openStart("ui5-datepicker", oDatePicker)
                 oRM.attr("placeholder", oDatePicker.getPlaceholder())
                 oRM.attr("format-pattern", oDatePicker.getFormatPattern())

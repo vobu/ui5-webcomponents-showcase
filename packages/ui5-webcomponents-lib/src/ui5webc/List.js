@@ -18,7 +18,7 @@ sap.ui.define(["sap/ui/core/Control"], Control => {
 
         renderer: {
             apiVersion: 2,
-            render: (oRM, oList) => {
+            render(oRM, oList) {
                 oRM.openStart("ui5-list", oList)
                 oRM.attr("mode", oList.getMode())
                 oRM.openEnd()

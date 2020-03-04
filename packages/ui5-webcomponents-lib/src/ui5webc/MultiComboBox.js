@@ -18,7 +18,7 @@ sap.ui.define(["sap/ui/core/Control"], Control => {
 
         renderer: {
             apiVersion: 2,
-            render: (oRM, oMultiComboBox) => {
+            render(oRM, oMultiComboBox) {
                 oRM.openStart("ui5-multi-combobox", oMultiComboBox)
                 oRM.attr("placeholder", oMultiComboBox.getPlaceholder())
                 oRM.attr("value", oMultiComboBox.getValue())

@@ -17,7 +17,7 @@ sap.ui.define(["sap/ui/core/Control"], Control => {
 
         renderer: {
             apiVersion: 2,
-            render: (oRM, oLI) => {
+            render(oRM, oLI) {
                 oRM.openStart("ui5-li", oLI)
                 oRM.attr("description", oLI.getDescription())
                 oRM.attr("info", oLI.getInfo())
