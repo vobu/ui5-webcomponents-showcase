@@ -9,11 +9,11 @@ Let’s change that :)
 ## quick start
 
 ```bash
-git clone https://github.com/vobu/ui5-webcomponents-showcase
-cd ui5-webcomponents-showcase
+$> git clone https://github.com/vobu/ui5-webcomponents-showcase
+$> cd ui5-webcomponents-showcase
 # yarn needed
-yarn
-yarn start
+$> yarn
+$> yarn start
 # ... build output ...
 # ... finished!
 # point browser to 
@@ -114,6 +114,12 @@ sap.ui.define(["sap/ui/core/Control"], Control => {
     })
 })
 ```
+
+> Note the `apiVersion: 2` as part of the renderer declaration! 
+>
+> It instructs the Rendering Manager to enable in-place DOM patching, massively improving rendering performance. 
+>
+> UI5 architect Cahit Gürgüc [gave a talk on this at UI5con 2019](https://www.slideshare.net/aborjinik/rendering-evolution-in-ui5) - ever since he implemented it into UI5’s core, `apiVersion: 2` should always be used when developing custom controls!
 
 Using the "custom web component control" in an XML view is the same as with any custom control:
 
