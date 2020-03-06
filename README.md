@@ -2,7 +2,7 @@
 
 This is a monorepo showcasing how to use UI5 Web Components in UI5.
 
-See the corresponding blog post at ... explaining all them concepts underneath.
+See the corresponding blog post at https://blogs.sap.com/2020/03/06/ui5-with-ui5-web-components/ explaining all them concepts underneath.
 
 ## overview
 
