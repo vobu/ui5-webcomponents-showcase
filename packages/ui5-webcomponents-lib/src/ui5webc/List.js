@@ -4,7 +4,8 @@ sap.ui.define(["sap/ui/core/Control"], Control => {
             properties: {
                 mode: {
                     type: "ui5webc.ListMode"
-                }
+                },
+                width: { type: "string", defaultValue: "" }
             },
             defaultAggregation: "items",
             aggregations: {
@@ -21,6 +22,16 @@ sap.ui.define(["sap/ui/core/Control"], Control => {
             render(oRM, oList) {
                 oRM.openStart("ui5-list", oList)
                 oRM.attr("mode", oList.getMode())
+
+                // make the list stretch to its' parent container by default
+                let sCssWidth = ""
+                if (oList.getWidth() !== "") {
+                    sCssWidth = oList.getWidth()
+                } else {
+                    sCssWidth = "100%"
+                }
+                oRM.attr("style", `width:${sCssWidth}`)
+
                 oRM.openEnd()
 
                 oList.getItems().forEach(item => {
