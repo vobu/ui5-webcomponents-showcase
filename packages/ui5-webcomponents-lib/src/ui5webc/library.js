@@ -1,7 +1,3 @@
-/*!
- * ${copyright}
- */
-
 /**
  * Initialization Code and shared classes of library ui5webc.
  */
@@ -11,11 +7,17 @@ sap.ui.define(
         // delegate further initialization of this library to the Core
         sap.ui.getCore().initLibrary({
             name: "ui5webc",
-            version: "${version}",
             dependencies: ["sap.ui.core"],
-            types: ["ui5webc.TitleDesign"],
+            types: ["ui5webc.ListMode", "ui5webc.TitleDesign"],
             interfaces: [],
-            controls: ["ui5webc.Title", "ui5webc.List", "ui5webc.StandardListItem"],
+            controls: [
+                "ui5webc.DatePicker",
+                "ui5webc.Item",
+                "ui5webc.List",
+                "ui5webc.MultiComboBox",
+                "ui5webc.StandardListItem",
+                "ui5webc.Title"
+            ],
             elements: [],
             noLibraryCSS: true
         })
@@ -25,25 +27,23 @@ sap.ui.define(
          *
          * @namespace
          * @alias ui5webc
-         * @author SAP SE
-         * @version ${version}
          * @public
          */
-        let thisLib = ui5webc
+        const oLib = ui5webc
 
-        thisLib.TitleDesign = {
+        oLib.TitleDesign = {
             Default: "",
             Center: "center",
             Left: "left",
             Right: "right"
         }
-        thisLib.ListMode = {
+        oLib.ListMode = {
             None: "None",
             SingleSelect: "SingleSelect",
             MultiSelect: "MultiSelect",
             Delete: "Delete"
         }
 
-        return thisLib
+        return oLib
     }
 )
