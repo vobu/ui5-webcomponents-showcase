@@ -9,7 +9,6 @@
     },
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
-    "resources": "resources.json",
     "ach": "ach",
     "dataSources": {
       "BackendDataSource": {
