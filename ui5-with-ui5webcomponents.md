@@ -6,6 +6,8 @@ Let’s change that :)
 
 🔥 https://github.com/vobu/ui5-webcomponents-showcase
 
+[TOC]
+
 ## quick start
 
 ```bash
